@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Popo", "Popo\Popo.vcproj", "{828E279E-FC9F-410F-80E3-602F849EBD0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{828E279E-FC9F-410F-80E3-602F849EBD0E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{828E279E-FC9F-410F-80E3-602F849EBD0E}.Debug|Win32.Build.0 = Debug|Win32
+		{828E279E-FC9F-410F-80E3-602F849EBD0E}.Release|Win32.ActiveCfg = Release|Win32
+		{828E279E-FC9F-410F-80E3-602F849EBD0E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
