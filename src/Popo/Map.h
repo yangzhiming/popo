@@ -31,4 +31,5 @@ public:
 
 private:
 	Bitmap*			m_pBmBkg;
+	CELL			m_vtCells[CELL_NUM];
 };

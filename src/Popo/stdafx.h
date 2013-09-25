@@ -12,6 +12,9 @@
 #include <windows.h>
 #include <GdiPlus.h>
 
+//stl
+#include <xstring>
+
 // C RunTime Header Files
 #include <stdlib.h>
 #include <malloc.h>

@@ -22,6 +22,14 @@ BOOL App::InitInstance(HINSTANCE hInstance)
 {
 	GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
+	wchar_t szFileName[MAX_PATH];
+	::GetModuleFileName(NULL, szFileName, MAX_PATH);
+	
+	std::wstring strFileName(szFileName);
+	size_t pos = strFileName.rfind('\\');
+	std::wstring strDirectory = strFileName.substr(0, pos);
+	::SetCurrentDirectory(strDirectory.c_str());
+
 	m_hInstance = hInstance;
 	m_pMainWnd = new GameWindow();
 	m_pMainWnd->Create(L"GameWindow", 200, 200, 806, 628);

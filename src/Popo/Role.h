@@ -1,11 +1,20 @@
 #pragma once
 
+enum DIRECTION
+{
+	Dir_Left,
+	Dir_Up,
+	Dir_Right,
+	Dir_Down
+};
+
 class Role
 {
 public:
 	Role(void);
 	~Role(void);
 
+	void Move(DIRECTION dir);
 	void Update(float fDelta);
 	void Draw(Graphics* pGraph);
 
@@ -16,6 +25,10 @@ public:
 
 private:
 	RoleState*			m_pRoleState;
+	DIRECTION			m_dir;
+	int					m_xPos;
+	int					m_yPos;
+	int					m_speed;
 };
 
 class RoleState
