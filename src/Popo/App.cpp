@@ -88,7 +88,7 @@ int App::Run()
 			}
 			else
 			{
-				
+				WaitMessage();
 			}
 		}
 	}

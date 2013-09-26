@@ -22,9 +22,12 @@ class Map : public SingletonT<Map>
 {
 public:
 	void LoadFromFile(const char* lpFileName);
+	void LoadFromIni(const char* lpIniName);
 	
 	void Draw(Graphics* pGraph);
 	void Update(float fDelta);
+
+	CELL* operator[](int row) { return m_vtCells + CELL_X_ALL*row; }
 public:
 	Map(void);
 	~Map(void);

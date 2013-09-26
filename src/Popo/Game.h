@@ -20,6 +20,11 @@ public:
 	void Draw(Graphics* pGraph);
 	void Update(float fDelta);
 
+private:
+	void DrawStart(Graphics* pGraph);
+	void DrawNormal(Graphics* pGraph);
+	void DrawEnd(Graphics* pGraph);
+
 protected:
 	GState		m_gsState;
 };

@@ -24,30 +24,7 @@ void Role::Move(DIRECTION dir)
 {
 	m_dir = dir;
 
-	switch(dir)
-	{
-	case Dir_Left:
-		m_xPos -= m_speed;
-		break;
-	case Dir_Up:
-		m_yPos -= m_speed;
-		break;
-	case Dir_Right:
-		m_xPos += m_speed;
-		break;
-	case Dir_Down:
-		m_yPos += m_speed;
-		break;
-	default:
-		ASSERT(FALSE);
-		break;
-	}
-
-	if (m_xPos <= 0)
-		m_xPos = 0;
-
-	if (m_yPos >= MAX_WND_HEIGHT)
-		m_yPos = MAX_WND_HEIGHT;
+	m_pRoleState->Move();
 }
 
 RoleState::RoleState(Role* pRole)
@@ -79,6 +56,34 @@ void RoleStateNormal::Draw(Graphics* pGraph)
 void RoleStateNormal::Update(float fDelta)
 {
 
+}
+
+void RoleStateNormal::Move()
+{
+	switch(m_pRole->m_dir)
+	{
+	case Dir_Left:
+		m_pRole->m_xPos -= m_pRole->m_speed;
+		break;
+	case Dir_Up:
+		m_pRole->m_yPos -= m_pRole->m_speed;
+		break;
+	case Dir_Right:
+		m_pRole->m_xPos += m_pRole->m_speed;
+		break;
+	case Dir_Down:
+		m_pRole->m_yPos += m_pRole->m_speed;
+		break;
+	default:
+		ASSERT(FALSE);
+		break;
+	}
+
+	if (m_pRole->m_xPos <= 0)
+		m_pRole->m_xPos = 0;
+
+	// 	if (m_pRole->m_yPos >= MAX_WND_HEIGHT)
+	// 		m_pRole->m_yPos = MAX_WND_HEIGHT;
 }
 
 RoleStateOnDie::RoleStateOnDie(Role* pRole)

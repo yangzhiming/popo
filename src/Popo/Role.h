@@ -37,6 +37,7 @@ public:
 	RoleState(Role* pRole);
 	virtual ~RoleState();
 
+	virtual void Move() {}
 	virtual void Draw(Graphics* pGraph) {}
 	virtual void Update(float fDelta) {}
 	
@@ -50,6 +51,7 @@ public:
 	RoleStateNormal(Role* pRole);
 	virtual ~RoleStateNormal();
 
+	virtual void Move();
 	virtual void Draw(Graphics* pGraph);
 	virtual void Update(float fDelta);
 };
